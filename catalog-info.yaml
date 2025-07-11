@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: go-hwlpynyw-gitops
+  description: This is GitOps manifest for go-hwlpynyw   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=go-hwlpynyw
+    backstage.io/kubernetes-id: go-hwlpynyw 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/go-hwlpynyw-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:go-hwlpynyw
